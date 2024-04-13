@@ -1,6 +1,6 @@
-\acb\in\*.*
-\acb\out
-\bin
-\extracted_adx
-\extracted_wav
-\replacements
+/acb/in/*.*
+/acb/out
+/bin
+/extracted_adx
+/extracted_wav
+/replacements
