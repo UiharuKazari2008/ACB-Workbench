@@ -1,13 +1,19 @@
 # ACB-Workbench
 Easy workspace to replace audio files in games that use ACB/AWB/HCA/ADX (Chunithm)
 
+## Credits
+- [DereTore](https://github.com/OpenCGSS/DereTore/)
+- [7Zip Portable](https://github.com/daemondevin/7-ZipPortable/)
+- [SonicAudioTools](https://github.com/blueskythlikesclouds/SonicAudioTools/)
+- [VGMStream](https://github.com/vgmstream/vgmstream/)
 
 ## Setup Workspace
-0. Download and Extract the **Pinned Message** with the latest ZIP
+0. Download and Extract the code [`Code > Download as ZIP`](https://github.com/UiharuKazari2008/ACB-Workbench/archive/refs/heads/main.zip)
 1. Extract the `chu.acb` and `chu.awb` from `/data/sound/` and place them in `/acb/in`
   * Open `extract.ps1` and `generate.ps1` in Notepad and fill in the "HCA Key" for Chunithm for `key0` and `key1` if your not using JP
   * Each should be 8 HEX long refer to the referance in the comments
 2. Right-Click `extract.ps1` and click **Run with PowerShell**
+  * The first run will download required bin files
 3. Wait for the ACB to extract
 
 ## Finding the system music files
