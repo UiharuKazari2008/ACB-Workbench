@@ -6,7 +6,7 @@ $key1 = "0074FF1F"
 $acb_in = ".\acb\in"
 $acb_out = ".\acb\out"
 $ext_wav = ".\extracted_wav"
-$ext_adx = ".\extracted_adx"
+#$ext_adx = ".\extracted_adx"
 $rep_in = ".\replacements"
 $rep_enc = ".\temp"
 
