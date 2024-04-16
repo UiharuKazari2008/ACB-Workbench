@@ -1,6 +1,7 @@
 /acb
 /bin
 /extracted_adx
-/extracted_wav
+/extracted_hca
+/concat-*.*
 /replacements
 /OPTION_BUILDER

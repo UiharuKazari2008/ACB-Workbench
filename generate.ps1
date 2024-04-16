@@ -53,7 +53,11 @@ if ((Test-Path -Path "${acb_out}\${projectName}") -eq $false) {
 }
 
 # Encode ACB
-if ((Test-Path -Path "${rep_in}\*.wav") -eq $false) { throw "No Files to replace" }
+if ((Test-Path -Path "${rep_in}\*.wav") -eq $false){ 
+    Write-Error "No replacement files were found"
+    Read-Host "Press Return to Exit"
+    throw "No WAV Files"
+}
 if ((Test-Path "${rep_enc}") -eq $false) { New-Item -ItemType Directory -Path "${rep_enc}" }
 Get-ChildItem "${rep_in}\*.wav" | ForEach-Object {
     Write-Host "Encode and Encrypt: $($_.BaseName).wav"

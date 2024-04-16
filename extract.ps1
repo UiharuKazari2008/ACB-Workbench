@@ -5,8 +5,8 @@ $key1 = "0074FF1F"
 
 $acb_in = ".\acb\in"
 $acb_out = ".\acb\out"
-$ext_wav = ".\extracted_wav"
-#$ext_adx = ".\extracted_adx"
+$ext_wav = ".\extracted_hca"
+$ext_adx = ".\extracted_adx"
 $rep_in = ".\replacements"
 $rep_enc = ".\temp"
 
@@ -80,9 +80,9 @@ Get-ChildItem "${acb_out}\${projectName}\*.hca" | ForEach-Object {
         & ".\bin\deretore-toolkit\hca2wav.exe" "$($_.FullName)" -a $key0 -b $key1 -o "${ext_wav}\$($_.BaseName).wav"
     }
 }
-#Get-ChildItem "${acb_out}\${projectName}\*.adx" | ForEach-Object {
-#    if ((Test-Path -Path "${ext_adx}\$($_.BaseName).wav") -eq $false) {
-#        Write-Host "Extracted: $($_.BaseName).wav"
-#        & ".\bin\ffmpeg.exe" -y -loglevel fatal -hide_banner -nostats -i "$($_.FullName)" "${ext_adx}\$($_.BaseName).wav"
-#    }
-#}
+Get-ChildItem "${acb_out}\${projectName}\*.adx" | ForEach-Object {
+    if ((Test-Path -Path "${ext_adx}\$($_.BaseName).wav") -eq $false) {
+        Write-Host "Extracted: $($_.BaseName).wav"
+        & ".\bin\ffmpeg.exe" -y -loglevel fatal -hide_banner -nostats -i "$($_.FullName)" "${ext_adx}\$($_.BaseName).wav"
+    }
+}
